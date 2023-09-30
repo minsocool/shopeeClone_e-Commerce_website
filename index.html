@@ -7,21 +7,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shopee</title>
     <!-- Reset CSS -->
-    <link rel="icon" href="https://cdn.icon-icons.com/icons2/3915/PNG/512/shopee_logo_icon_249631.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="icon" href="https://cdn.icon-icons.com/icons2/3915/PNG/512/shopee_logo_icon_249631.png">
     <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.4.2/css/all.min.css">
     <link rel="stylesheet" href="./assets/css/base.css">
     <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+    <link rel="stylesheet" href="./assets/css/grid.css">
 </head>
 
 <body>
     <div class="app">
         <!-- Header -->
         <header class="header">
-            <div class="grid">
-
+            <div class="grid wide">
                 <!-- Header Nav bar -->
-                <nav class="header__navbar">
+                <nav class="header__navbar hide-on-mobile-tablet">
                     <ul class="header__navbar-list">
                         <li class="header__navbar-item  header__navbar-item--separate">
                             Seller Centre
@@ -176,11 +177,18 @@
 
                 <!-- Header With search -->
                 <div class="header-with-search">
+                    <label for="mobile-search-checkbox" class="header__mobile-search">
+                        <i class="header__mobile-search-icon fa-solid fa-magnifying-glass"></i>
+                    </label>
                     <div class="header__logo">
                         <a href="" class="header__logo-link">
 
                         </a>
                     </div>
+
+                    <input type="checkbox" hidden id="mobile-search-checkbox" class="header__search-checkbox">
+
+
                     <div class="header__search">
                         <div class="header__search-input-wrap">
 
@@ -426,14 +434,40 @@
                         </div>
                     </div>
                 </div>
+                <ul class="header__sort-bar">
+                    <li class="header__sort-item">
+                        <a href="" class="header__sort-link">
+                            Popular
+                        </a>
+                    </li>
+                    <li class="header__sort-item header__sort-item--active">
+                        <a href="" class="header__sort-link">
+                            Latest
+                        </a>
+                    </li>
+                    <li class="header__sort-item">
+                        <a href="" class="header__sort-link">
+                            Top Sales
+                        </a>
+                    </li>
+                    <li class="header__sort-item">
+                        <a href="" class="header__sort-link">
+                            Price
+                        </a>
+                    </li>
+                </ul>
             </div>
+
+
+
+
         </header>
         <!-- Content -->
         <div class="app__container">
-            <div class="grid">
-                <div class="grid__row app-content">
+            <div class="grid wide">
+                <div class="row sm-gutter app__content">
                     <!-- Category column -->
-                    <div class="grid__column-2">
+                    <div class="col l-2 m-0 c-0">
                         <!-- Category -->
                         <nav class="category">
                             <h3 class="category__heading">
@@ -479,9 +513,9 @@
                             </ul>
                         </nav>
                     </div>
-                    <div class="grid__column-10">
+                    <div class="col l-10 m-12 c-12">
                         <!-- Filter -->
-                        <div class="home-filter">
+                        <div class="home-filter hide-on-mobile-tablet">
                             <span class="home-filter__label">
                                 Sort by
                             </span>
@@ -527,12 +561,60 @@
                                 </div>
                             </div>
                         </div>
-
+                        <nav class="mobile-category">
+                            <ul class="mobile-category__list">
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">
+                                        All Products
+                                    </a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">
+                                        iPad
+                                    </a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">
+                                        AirPods
+                                    </a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">
+                                        iPhone
+                                    </a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">
+                                        Apple Watch
+                                    </a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">
+                                        MacBook
+                                    </a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">
+                                        Apple TV
+                                    </a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">
+                                        Apple Home
+                                    </a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">
+                                        Accessory Apple
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
                         <div class="home-products">
                             <!-- Grid -> row -> column -->
-                            <div class="grid__row">
+                            <div class="row sm-gutter">
                                 <!-- Product item -->
-                                <div class="grid_column-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a class="home-product-item" href="#">
                                         <div class="home-product-item__img"
                                             style="background-image: url('https://down-vn.img.susercontent.com/file/b4d8f2c5ec5de05b98a68ba1fdc17d4c');">
@@ -579,7 +661,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="grid_column-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a class="home-product-item" href="#">
                                         <div class="home-product-item__img"
                                             style="background-image: url('https://down-vn.img.susercontent.com/file/93b3f6d4799b06f9279f817540daa4d1_tn');">
@@ -626,7 +708,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="grid_column-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a class="home-product-item" href="#">
                                         <div class="home-product-item__img"
                                             style="background-image: url(https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-llxdfg3rk63j0e_tn);">
@@ -673,7 +755,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="grid_column-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a class="home-product-item" href="#">
                                         <div class="home-product-item__img"
                                             style="background-image: url('https://down-vn.img.susercontent.com/file/38a51fee63a623600932f1aea78d76a9_tn');">
@@ -720,7 +802,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="grid_column-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a class="home-product-item" href="#">
                                         <div class="home-product-item__img"
                                             style="background-image: url('https://down-vn.img.susercontent.com/file/a256a89d3b7b4b80224e768d9ff6fdff_tn');">
@@ -767,7 +849,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="grid_column-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a class="home-product-item" href="#">
                                         <div class="home-product-item__img"
                                             style="background-image: url(https://down-vn.img.susercontent.com/file/575e04c0e1d08b5f1b9f624a8d6b1419_tn);">
@@ -814,7 +896,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="grid_column-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a class="home-product-item" href="#">
                                         <div class="home-product-item__img"
                                             style="background-image: url(https://down-vn.img.susercontent.com/file/vn-11134207-7qukw-lf86fphw7yx673_tn);">
@@ -861,7 +943,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="grid_column-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a class="home-product-item" href="#">
                                         <div class="home-product-item__img"
                                             style="background-image: url(https://down-vn.img.susercontent.com/file/1cba156175a5ef0b0d356b52451b4c42_tn);">
@@ -908,7 +990,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="grid_column-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a class="home-product-item" href="#">
                                         <div class="home-product-item__img"
                                             style="background-image: url('https://down-vn.img.susercontent.com/file/f2f9ddaf332def792d62021325ca0198_tn');">
@@ -955,7 +1037,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="grid_column-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a class="home-product-item" href="#">
                                         <div class="home-product-item__img"
                                             style="background-image: url('https://down-vn.img.susercontent.com/file/6728200054fa441a6bf02399ade77d29_tn');">
@@ -1003,7 +1085,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="grid_column-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a class="home-product-item" href="#">
                                         <div class="home-product-item__img"
                                             style="background-image: url('https://down-vn.img.susercontent.com/file/575e04c0e1d08b5f1b9f624a8d6b1419_tn');">
@@ -1050,7 +1132,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="grid_column-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a class="home-product-item" href="#">
                                         <div class="home-product-item__img"
                                             style="background-image: url('https://down-vn.img.susercontent.com/file/c8e1c410dc0b31cee349591e62494cfc_tn');">
@@ -1097,7 +1179,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="grid_column-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a class="home-product-item" href="#">
                                         <div class="home-product-item__img"
                                             style="background-image: url('https://down-vn.img.susercontent.com/file/f43ff45df09ca9b9c3056c2ff5704e5b_tn');">
@@ -1144,7 +1226,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="grid_column-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a class="home-product-item" href="#">
                                         <div class="home-product-item__img"
                                             style="background-image: url('https://down-vn.img.susercontent.com/file/eb384b16e9ed3d807ee58c74560217d7_tn');">
@@ -1192,7 +1274,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="grid_column-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a class="home-product-item" href="#">
                                         <div class="home-product-item__img"
                                             style="background-image: url('https://down-vn.img.susercontent.com/file/f4061033a16d5161a5a068fce6e5e83f_tn');">
@@ -1239,7 +1321,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="grid_column-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a class="home-product-item" href="#">
                                         <div class="home-product-item__img"
                                             style="background-image: url('https://down-vn.img.susercontent.com/file/03e28521704ff518c04b38039f2d0aab_tn');">
@@ -1286,7 +1368,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="grid_column-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a class="home-product-item" href="#">
                                         <div class="home-product-item__img"
                                             style="background-image: url('https://down-vn.img.susercontent.com/file/683cfae0941d7a62442e36212437a2e8_tn');">
@@ -1333,7 +1415,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="grid_column-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a class="home-product-item" href="#">
                                         <div class="home-product-item__img"
                                             style="background-image: url('https://down-vn.img.susercontent.com/file/35c4320e98c656d104ef0ec3d3bab4de_tn');">
@@ -1380,7 +1462,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="grid_column-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a class="home-product-item" href="#">
                                         <div class="home-product-item__img"
                                             style="background-image: url('https://down-vn.img.susercontent.com/file/141b2cc2ce15628a237a34ca5f8405b5_tn');">
@@ -1427,7 +1509,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="grid_column-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a class="home-product-item" href="#">
                                         <div class="home-product-item__img"
                                             style="background-image: url('https://down-vn.img.susercontent.com/file/e97b579f7fdfd7cc61089fe234404c22_tn');">
@@ -1474,7 +1556,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="grid_column-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a class="home-product-item" href="#">
                                         <div class="home-product-item__img"
                                             style="background-image: url('https://down-vn.img.susercontent.com/file/3c0cc0fc5efd4991cf98728191883e80_tn');">
@@ -1521,7 +1603,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="grid_column-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a class="home-product-item" href="#">
                                         <div class="home-product-item__img"
                                             style="background-image: url('https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-llm05p5nkerg1c_tn');">
@@ -1568,7 +1650,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="grid_column-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a class="home-product-item" href="#">
                                         <div class="home-product-item__img"
                                             style="background-image: url('https://down-vn.img.susercontent.com/file/3a67534ef0192d8a5139adbf86c4aecf_tn');">
@@ -1615,7 +1697,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="grid_column-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a class="home-product-item" href="#">
                                         <div class="home-product-item__img"
                                             style="background-image: url('https://down-vn.img.susercontent.com/file/bf4f747aeda57f78b07554331f8a56f4_tn');">
@@ -1662,7 +1744,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="grid_column-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a class="home-product-item" href="#">
                                         <div class="home-product-item__img"
                                             style="background-image: url('https://down-vn.img.susercontent.com/file/00b75ee9b48eaa61f718a0f5ab169a84_tn');">
@@ -1709,7 +1791,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="grid_column-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a class="home-product-item" href="#">
                                         <div class="home-product-item__img"
                                             style="background-image: url('https://down-vn.img.susercontent.com/file/b6a3b49d91b96cd98bb845743cebd4ef_tn');">
@@ -1756,7 +1838,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="grid_column-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a class="home-product-item" href="#">
                                         <div class="home-product-item__img"
                                             style="background-image: url('https://down-vn.img.susercontent.com/file/8a6a0c78023215c2ff75cb7af471c0fd');">
@@ -1803,7 +1885,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="grid_column-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a class="home-product-item" href="#">
                                         <div class="home-product-item__img"
                                             style="background-image: url('https://down-vn.img.susercontent.com/file/87eb4ef0e377ad5dd297faf4391b839e_tn');">
@@ -1850,7 +1932,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="grid_column-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a class="home-product-item" href="#">
                                         <div class="home-product-item__img"
                                             style="background-image: url('https://down-vn.img.susercontent.com/file/a5e087409cca78fb6bdd281da177ff88_tn');">
@@ -1919,6 +2001,33 @@
                             </li>
                             <li class="pagination-item">
                                 <a href="" class="pagination-item__link">
+                                    3
+                                </a>
+                            </li>
+                            <li class="pagination-item">
+                                <a href="" class="pagination-item__link">
+                                    4
+                                </a>
+                            </li>
+                            <li class="pagination-item">
+                                <a href="" class="pagination-item__link">
+                                    5
+                                </a>
+                            </li>
+                            <li class="pagination-item">
+                                <a href="" class="pagination-item__link">
+                                    6
+                                </a>
+                            </li>
+                            <li class="pagination-item">
+                                <a href="" class="pagination-item__link">
+                                    7
+                                </a>
+                            </li>
+
+
+                            <li class="pagination-item">
+                                <a href="" class="pagination-item__link">
                                     <i class="pagination-item__icon fa-solid fa-angle-right"></i>
                                 </a>
                             </li>
@@ -1930,9 +2039,9 @@
 
 
         <footer class="footer">
-            <div class="grid">
-                <div class="grid__row">
-                    <div class="footer__top">
+            <div class="grid wide footer__content">
+                <div class="row footer__support">
+                    <div class="col l-4 m-4 c-12">
                         <div class="footer-support__box">
                             <img src="https://deo.shopeemobile.com/shopee/shopee-pcmall-live-sg/assets/6c502a2641457578b0d5f5153b53dd5d.png"
                                 alt="" class="footer-support__box-img">
@@ -1945,6 +2054,9 @@
                                 </p>
                             </div>
                         </div>
+
+                    </div>
+                    <div class="col l-4 m-4 c-12">
                         <div class="footer-support__box">
                             <img src="https://deo.shopeemobile.com/shopee/shopee-pcmall-live-sg/assets/511aca04cc3ba9234ab0e4fcf20768a2.png"
                                 alt="" class="footer-support__box-img">
@@ -1957,6 +2069,9 @@
                                 </p>
                             </div>
                         </div>
+
+                    </div>
+                    <div class="col l-4 m-4 c-12">
                         <div class="footer-support__box">
                             <img src="https://deo.shopeemobile.com/shopee/shopee-pcmall-live-sg/assets/16ead7e0a68c3cff9f32910e4be08122.png"
                                 alt="" class="footer-support__box-img">
@@ -1971,10 +2086,11 @@
                         </div>
 
                     </div>
+
                 </div>
-                <div class="footer__middle">
-                    <div class="grid__row">
-                        <div class="grid_column-2-4">
+                <div class="footer__middle footer__content">
+                    <div class="row">
+                        <div class="col l-2-4 m-6 c-6">
                             <h3 class="footer__heading">
                                 Customer Service
                             </h3>
@@ -2036,7 +2152,7 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="grid_column-2-4">
+                        <div class="col l-2-4 m-6 c-6">
                             <h3 class="footer__heading">
                                 About Shopee
                             </h3>
@@ -2090,7 +2206,7 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="grid_column-2-4">
+                        <div class="col l-2-4 m-12 c-12">
                             <h3 class="footer__heading">
                                 Payment
                             </h3>
@@ -2219,7 +2335,7 @@
                             </ul>
 
                         </div>
-                        <div class="grid_column-2-4">
+                        <div class="col l-2-4 m-4 c-6">
                             <h3 class="footer__heading">
                                 Follow Us
                             </h3>
@@ -2245,31 +2361,35 @@
 
                             </ul>
                         </div>
-                        <div class="grid_column-2-4">
-                            <h3 class="footer__heading">
-                                Shopee App Download
-                            </h3>
-                            <div class="footer__download">
-                                <a href="" class="footer__download-link">
-                                    <img src="/assets/img/qr_code.png" alt="Download QR" class="footer__download-qr">
-                                </a>
+                        <div class="col l-2-4 m-8 c-6">
+                            <div class="footer__download-box">
+                                <h3 class="footer__heading">
+                                    Shopee App Download
+                                </h3>
+                                <div class="footer__download">
+                                    <a href="" class="footer__download-link">
+                                        <img src="/assets/img/qr_code.png" alt="Download QR"
+                                            class="footer__download-qr">
+                                    </a>
 
-                                <div class="footer__download-apps">
-                                    <a class="footer__download-app-link">
-                                        <img src="https://down-vn.img.susercontent.com/file/ad01628e90ddf248076685f73497c163"
-                                            alt="App Store" class="footer__download-app-icon">
-                                    </a>
-                                    <a class="footer__download-app-link">
-                                        <img src="https://down-vn.img.susercontent.com/file/ae7dced05f7243d0f3171f786e123def"
-                                            alt="Google Play" class="footer__download-app-icon">
-                                    </a>
-                                    <a class="footer__download-app-link">
+                                    <div class="footer__download-apps">
+                                        <a class="footer__download-app-link">
+                                            <img src="https://down-vn.img.susercontent.com/file/ad01628e90ddf248076685f73497c163"
+                                                alt="App Store" class="footer__download-app-icon">
+                                        </a>
+                                        <a class="footer__download-app-link">
+                                            <img src="https://down-vn.img.susercontent.com/file/ae7dced05f7243d0f3171f786e123def"
+                                                alt="Google Play" class="footer__download-app-icon">
+                                        </a>
+                                        <a class="footer__download-app-link">
 
-                                        <img src="https://down-vn.img.susercontent.com/file/35352374f39bdd03b25e7b83542b2cb0"
-                                            alt="App Gallery" class="footer__download-app-icon">
-                                    </a>
+                                            <img src="https://down-vn.img.susercontent.com/file/35352374f39bdd03b25e7b83542b2cb0"
+                                                alt="App Gallery" class="footer__download-app-icon">
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
+
                         </div>
                     </div>
                 </div>
@@ -2278,29 +2398,42 @@
             </div>
 
             <div class="footer__bottom">
-                <div class="grid">
-                    <div class="footer__select-region">
-                        <p class="footer__text">© 2023 Copyright belongs to Hoang Minh</p>
-                        <div class="footer__region">
-                            <p class="footer__region-text">Country & Region: </p>
-                            <a href="" class="footer__region-name">Singapore</a>
-                            <a href="" class="footer__region-name">Indonesia</a>
-                            <a href="" class="footer__region-name">Taiwan</a>
-                            <a href="" class="footer__region-name">Thailand</a>
-                            <a href="" class="footer__region-name">Malaysia</a>
-                            <a href="" class="footer__region-name">Vietnam</a>
-                            <a href="" class="footer__region-name">Philippines</a>
-                            <a href="" class="footer__region-name">Brazil</a>
-                            <a href="" class="footer__region-name">México</a>
-                            <a href="" class="footer__region-name">Colombia</a>
-                            <a href="" class="footer__region-name">Chile</a>
+                <div class="grid wide">
+                    <div class="row footer__content">
+                        <div class="col l-3 m-12 c-12">
+                            <div class="footer-copyright__text">
+                                <p class="footer__text">© 2023 Copyright belongs to Hoang Minh</p>
+                            </div>
+
+                        </div>
+                        <div class="col l-9 m-12">
+                            <div class="footer__select-region">
+                                <p class="footer__region-text">Country & Region: </p>
+                                <div class="footer__region">
+
+                                    <a href="" class="footer__region-name">Singapore</a>
+                                    <a href="" class="footer__region-name">Indonesia</a>
+                                    <a href="" class="footer__region-name">Taiwan</a>
+                                    <a href="" class="footer__region-name">Thailand</a>
+                                    <a href="" class="footer__region-name">Malaysia</a>
+                                    <a href="" class="footer__region-name">Vietnam</a>
+                                    <a href="" class="footer__region-name">Philippines</a>
+                                    <a href="" class="footer__region-name">Brazil</a>
+                                    <a href="" class="footer__region-name">México</a>
+                                    <a href="" class="footer__region-name">Colombia</a>
+                                    <a href="" class="footer__region-name">Chile</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
+
                 </div>
             </div>
             <div class="footer__end">
-                <div class="grid">
-                    <div class="grid__row footer-policy">
+                <div class="grid wide">
+                    <div class="row"></div>
+
+                    <div class="row footer-policy">
                         <a href="" class="footer-policy__title">PRIVACY POLICY</a>
                         <a href="" class="footer-policy__title">TERM OF SERVICE</a>
                         <a href="" class="footer-policy__title">SHIPPING POLICY</a>
